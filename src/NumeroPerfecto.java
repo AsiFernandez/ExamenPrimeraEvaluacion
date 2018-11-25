@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class NumeroPerfecto {
+
+	public static void main(String[] args) {
+		
+		
+		//Pedir un numero por teclado y calcular si el numero es perfecto o no.
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Introduce un numero ");
+		int numero = scan.nextInt();
+		int NumeroPerfecto = 0;
+		
+		for(int i = 1; i < numero; i++ ) {
+			if(numero %i == 0){
+				NumeroPerfecto = NumeroPerfecto +i;
+			}
+		}
+		
+		if(NumeroPerfecto == numero) {
+			System.out.println("El numero introducido es perfecto!");
+		}else {
+			System.out.println("El numero introducido no es perfecto!");
+		}
+		
+		
+		//Calcular cuantos numeros perfectos hay del 1 al 1000.
+		int contador = 0;
+		int NumeroPerfecto2 = 0;
+		
+		for(int i = 1; i <= 1000; i++ ) {
+			for(int j=1; j < i; j++ ) {
+				if(i%j == 0){
+					NumeroPerfecto2 = NumeroPerfecto2 + j;
+					if(NumeroPerfecto2 == i) {
+						contador= +1;
+					}
+				}
+				
+			}
+		}
+		
+		System.out.println("Entre el 1 y el 1000 hay " + contador + " Numeros perfectos");	
+		
+	}
+
+}
