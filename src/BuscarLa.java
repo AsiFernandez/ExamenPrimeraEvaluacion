@@ -6,8 +6,8 @@ public class BuscarLa {
 		// TODO Auto-generated method stub
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Introduce un numero ");
-		String frase = scan.nextLine();
+		System.out.println("Introduce una frase");
+		String frase = scan.nextLine().toLowerCase();
 		
 		for(int i = 0; i< frase.length(); i++) {
 			if(frase.charAt(i)== 'l' && frase.charAt(i+1) == 'a'){
